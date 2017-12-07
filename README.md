@@ -4,8 +4,10 @@
 
 This software is writed in Python 3. The Password Generator fisrt ask you for the size of the password you need then create a random password.  
 
-![Screenshot](screenshot.png)
+![Screenshot](screenshot.png)  
 
+
+![Screenshot](screenshot1.png)
 
 
 
