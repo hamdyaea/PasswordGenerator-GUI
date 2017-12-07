@@ -4,6 +4,7 @@ import string
 import random
 from easygui import *
 
+imgPass = "./images/password.gif"
 
 def generatePassword(num):
 
@@ -22,7 +23,12 @@ title = "Password generator"
 fieldNames = ["8"]
 fieldValues = 0
 fieldValues = enterbox(msg,title, fieldNames)
+
+image = imgPass
+
+
+
 message = "This is your new password : "+str(newPass[:int(fieldValues)])
 msgCenter = message.center(80)
-msgbox(msg=msgCenter,title="Password Generator")
-
+choices = ["Ok"]
+reply = buttonbox(msgCenter, image=image, choices=choices)
