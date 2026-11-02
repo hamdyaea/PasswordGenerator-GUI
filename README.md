@@ -1,36 +1,17 @@
 # Password Generator with GUI
 
-## What's this software ?  
+**Developer:** Hamdy Abou El Anein  
+**Contact:** info@daylightlinux.ch  
+**License:** GNU GPL v3 (see LICENSE).
 
-This software is writed in Python 3. The Password Generator fisrt ask you for the size of the password you need then create a random password.  
-
-![Screenshot](screenshot.png)  
-
-
-![Screenshot](screenshot1.png)
-
-
-
-## What you need to make it work :
-
-This game is made for Python 3.  
-
-Install all the packages for : Python 3.  
-
-easygui at least version 0.98  
-
-```sh
-sudo python3 -m pip install --upgrade easygui  
-```  
-
-## How to launch the Password Generator :
+A Python 3 password generator using the cryptographically secure `secrets` module, with a Tkinter desktop interface and a CLI. Passwords are generated only when requested, and lengths are validated (1–4096).
 
 ```sh
 python3 PasswordGenerator.py
+python3 PasswordGenerator.py --length 24
+python3 -m unittest discover -s tests -v
 ```
 
+The desktop version requires Python with Tkinter installed. No `easygui` or third-party Python dependency is needed. Avoid displaying generated passwords in recorded terminal sessions.
 
-## Developer - Author
-
-Hamdy Abou El Anein
-
+The original implementation is preserved on the [old branch](https://github.com/hamdyaea/PasswordGenerator-GUI/tree/old).
