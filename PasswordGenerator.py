@@ -1,3 +1,4 @@
+from pathlib import Path
 #!/usr/bin/env python3
 # Developer: Hamdy Abou El Anein
 # Contact: info@daylightlinux.ch
@@ -31,9 +32,12 @@ def main() -> None:
     from tkinter import messagebox, ttk
     root = tk.Tk()
     root.title("Password Generator")
-    root.geometry("580x185")
     frame = ttk.Frame(root, padding=18)
     frame.pack(fill="both", expand=True)
+    artwork = tk.PhotoImage(file=str(Path(__file__).resolve().parent / "images/password-ui.png"))
+    illustration = tk.Label(frame, image=artwork)
+    illustration.image = artwork
+    illustration.pack()
     ttk.Label(frame, text="Password length (1–4096):").pack(anchor="w")
     length_var = tk.StringVar(value="20")
     ttk.Entry(frame, textvariable=length_var, width=12).pack(anchor="w", pady=5)
